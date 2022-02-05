@@ -1,0 +1,396 @@
+
+html,body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    background-color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  left: 10%;
+  top: 5%;
+  text-align: center; 
+  color: #000;
+  
+
+}
+
+.grid-item {
+  display:inline-grid;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  
+}
+
+
+.grid-item:hover {
+  transform-origin: right top;
+  cursor: pointer;
+  background-color: rgb(52, 137, 177);
+  transition: 3s cubic-bezier(0.215, 0.610, 0.355, 1);
+  
+}
+
+.grid-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+ 
+
+  
+}
+form textarea{
+  margin-left: 15%;
+  background-color: #000;
+  border-radius: 8px;
+}
+label{
+  opacity: 40%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.portfolio-footer-div{
+  height: 200px;
+  width: 100%;
+}
+
+.home1{
+  height: 100%;
+  background-color: rgb(120, 148, 180);
+  background-image: url(/portfolio-img/landscape02.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+.section a{
+color: rgb(37, 107, 84);
+  
+}
+
+
+.tag-name{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.521);
+  box-shadow: #314f5350 20px 20px;
+  color: #fff;
+  position: absolute;
+  top:25%;
+  left: 15%;
+  width: 70%;
+  height: 60%;
+}
+.tag-name h1 {
+  margin-top: 15%;
+  font-family:none;
+  font-size: 5em;
+  animation-name: my-name;
+  animation: my-name;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+   
+}
+
+.tag-name label {
+  margin-left:-5px;
+  margin-top: 50px;
+  position: absolute;
+  font-size: 30px;
+  text-align: left;
+}
+
+@keyframes my-name {
+  0% {
+
+   color: #000;
+  }
+
+  50% {
+
+   color: rgb(145, 137, 137);
+    }
+
+  100% {
+
+  color: rgb(255, 255, 255);
+  }
+  
+}
+
+nav{
+
+position:fixed;
+width: 80%;
+font-weight: bold;
+margin-right: 100px;
+margin-top: 10px;
+display: grid;
+
+
+
+
+}
+
+nav a {
+
+  padding: 4px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  float: right;
+  margin-right: 50px;
+  
+}
+nav a:hover{
+  font-weight: bold;
+  transition: .5s ease-in-out;
+  color: rgb(55, 136, 55);
+}
+
+
+.section1{
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.profile{
+
+ height: 50%;
+ background-color: gainsboro;
+}
+
+
+
+
+a{
+  text-decoration: none;
+  color: rgb(46, 196, 113);
+}
+
+
+
+.homepage {
+  width: 80%;
+  height: 200px;
+  margin-left: 15%;
+  margin-top: 30px;
+}
+
+
+
+
+.transition-fade {
+  transition: 0.7s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+.transition-left{
+	transition: .7s;
+	transform: translateX(0);
+
+}
+
+html.is-animating .transition-left{
+	opacity: 0;
+	transform: translateX(-100px);
+}
+
+
+.overlay{
+	position: absolute;
+	width: 100%;
+	height: 100em;
+	background: rgb(52, 137, 177);
+	left: 0;
+	top: 0;
+	transform:scaleX(0);
+	transform-origin: right;
+  transition: ease-in-out;
+
+}
+
+.transition-wipe{
+	transition: 0.7s;
+	transform: scaleX(0);
+
+}
+
+html.is-animating .transition-wipe{
+	transform: scaleX(1)
+}
+
+
+
+
+
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 800px) {
+
+  .tag-name {
+    top: 20%;
+  }
+
+  .tag-name h1{
+    font-size: 60px;
+    margin-top: 50%;
+    text-align: left;
+    margin-left: 20px;
+  }
+  .tag-name label {
+    margin-left: -40px;
+    margin-top: 130px;
+    font-size: 20px;
+  }
+  .homepage {
+
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-right: 10%;    
+    }
+
+    .profile img{
+      margin-left: -150px;
+      border-radius: 8px;
+    }
+
+    .grid-container {
+      margin-top: 5%;
+      display: grid;
+      width: 80%;
+      left: 10%;
+      grid-template-columns: auto auto ;
+  
+    
+    }
+
+    nav {
+    
+      position: fixed;
+      width: 100%;
+      margin-top: 20px;
+      font-weight: bold;
+      z-index: 1;
+      }
+      
+    nav a{
+    
+      font-size: 18px;
+      float: right;
+      margin-right: 3em;
+      }
+
+}
+
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 600px) {
+  .homepage {
+    height: 200px;
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-right: 10%;
+    }
+
+    .social-links{
+
+      display: grid;
+        grid-template-columns: auto;
+       row-gap: 0.5em;
+       margin-left: 5px;
+  
+    
+    }
+    .grid-container {
+      margin-top: 5%;
+      display: grid;
+      width: 80%;
+      grid-template-columns: auto;
+    
+    }
+    nav {
+  
+      z-index: 1;
+      width: 2em;
+      left: 90%;
+      top: 10%;
+      text-align: left;
+      display: grid;
+      position: fixed;
+      border-left: 1px solid rgb(255, 255, 255);
+
+  
+       }
+
+}
+
+
+footer{
+
+    background-color: transparent;
+    padding-bottom: 0;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+
+    
+    
+}
+
+
+.my-footer {
+  text-align: center;
+  display: grid;
+  color: rgb(0, 0, 0);
+  border-bottom: 0.1px rgb(90, 88, 88) solid;
+  font-size: 14px;
+  position: absolute;
+  margin-top: 10%;
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid;
+
+
+}
+
+.social-links{
+  display: grid;
+    grid-template-columns: auto;
+   row-gap: 1em;
+   width: 30px;
+   text-align: center;
+}
+
+.social-links a:hover{
+color: rgb(66, 146, 102);
+
+
+
+}
+
+.social-links a {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+}
